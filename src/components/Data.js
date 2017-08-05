@@ -1,28 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {Input} from './Input';
 
-class Form extends React.Component {
-  constructor(props) {
-    this.state = {
-      animals: 0,
-      carbon: 0,
-      forest: 0,
-      grain: 0,
-      water: 0
-    };
-  }
+class Data extends React.Component {
 
   render() {
     return (
       <div>
-        <p>{animals} Animals not eaten</p>
-        <p>{carbon} C02 saved</p>
-        <p>{forest} Sq ft of forest saved</p>
-        <p>{grain} lbs of grain saved</p>
-        <p>{water} gallons of water saved</p>
+        <p>{props.animals} Animals not eaten</p>
+        <p>{this.state.carbon} C02 saved</p>
+        <p>{this.state.forest} Sq ft of forest saved</p>
+        <p>{this.state.grain} lbs of grain saved</p>
+        <p>{this.state.water} gallons of water saved</p>
       </div>
     );
   }
 }
 
-export default Form;
+export default Data;
